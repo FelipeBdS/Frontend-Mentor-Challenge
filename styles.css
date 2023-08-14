@@ -1,0 +1,402 @@
+:root {
+    --desaturated-red:hsl(0, 36%, 70%);
+    --soft-red:hsl(0, 93%, 68%);
+    --dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(247, 238, 238);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.logo-div {
+    width: 55vw;
+    position: absolute;
+    margin-top: 3.5rem;
+    padding-left: 10rem;
+}
+
+#image-div {
+    align-self: flex-end;
+    height: 100vh;
+}
+
+.desktop-image {
+    max-height: 100%;
+    width: 100%;
+    margin-right: 8em;
+}
+
+
+.text-content {
+    width: 40vw;
+    display: grid;
+    gap: 10px;
+    position: fixed;
+    margin-top: 10rem;
+    margin-left: 10rem;
+}
+
+#colored-text1 {
+    color: var(--desaturated-red);
+    font-size: 50px;
+    font-weight: 300;
+    letter-spacing: 10px;
+}
+
+.text-content p {
+    font-size: 50px;
+    letter-spacing: 10px;
+    font-weight: 400;
+    color: var(--dark-grayish-red);
+    
+}
+
+#colored-text2 {
+    font-size: 16px;
+    letter-spacing: normal;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    color: var(--desaturated-red);
+}
+
+.input-area {
+    position: relative;
+    display: inline-block;
+}
+
+.input-area input {
+    width: 28em;
+    height: 50px;
+    border-radius: 25px;
+    padding-left: 30px ;
+    border: 1px solid var(--desaturated-red) ;
+    font-size: 15px;
+}
+
+.input-area button {
+    height: 50px;
+    width: 90px;
+    font-size: 35px;
+    font-weight: 300;
+    border-radius: 25px;
+    border: 1px solid var(--desaturated-red) ;
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-40%);
+    transform: translateX(-50%);
+    background-color: var(--soft-red);
+}
+
+button:hover {
+    background-color: var(--desaturated-red);
+    width: 100px;
+    height: 55px;
+    transition: .5s;
+}
+
+.input-area img {
+    background-color: inherit;
+    border: none;
+}
+
+.input-area img:hover {
+    background-color: inherit;
+}
+
+.input-error {
+    border: 2px solid red;
+}
+
+.error-icon {
+    position: absolute;
+    top: calc(50% - 0.25em);
+    right: 10%;
+    transform: translateY(-90%);
+}
+
+
+.error-message {
+    display: none;
+    color: red;
+    margin-top: 5px;
+  }
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .flex-container {
+      flex-direction: column; 
+      align-items: center; 
+      text-align: center; 
+      overflow-y: visible;
+    }
+  
+    .logo-div {
+      position: relative; 
+      padding-left: 0 !important; 
+      margin-top: 1rem; 
+    }
+  
+    #image-div {
+      max-width: 100%;  
+      margin: 2rem 0; 
+      align-self: center;
+    }
+    
+    .desktop-image {
+        max-height: 100vh;
+    }
+  
+    .text-content {
+      width: 90%; 
+      margin: 1rem auto;
+      margin-left: 1.5rem !important; 
+      position: inherit;
+      text-align: center;
+    }
+
+    .input-area {
+        position: relative;
+    }
+
+    .input-area input {
+       
+        height: 50px;
+        border-radius: 25px;
+        padding-left: 30px ;
+        border: 1px solid var(--desaturated-red) ;
+        font-size: 15px;
+        margin-left: 6rem;
+    }
+
+    .input-area button {
+        position: relative;
+        right: 10%;
+        transform: translateY(9%);
+    }
+
+    .input-area button img {
+        height: .7em;
+        padding-top: 4px;
+    }
+
+    .error-icon {  
+    position: absolute;
+    top: 50%;
+    transform: translateY(-90%);
+      }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1332px) {
+    .logo-div {
+        padding-left: 55px;
+        width: 20vw;
+    }
+
+    #image-div {
+        height: 100vh;
+        width: 60vw;
+    }
+
+    .text-content {
+        margin-left: 3.8rem;
+        width: 30vw;
+    }
+
+    #colored-text1 {
+        font-size: 40px;
+    }
+
+    .text-content p {
+        font-size: 40px;
+    }
+
+    #colored-text2 {
+        font-size: 12px;
+    }
+
+    .input-area input {
+        height: 3em;
+        width: 25em;
+        font-size: 12px;
+    }
+
+    .input-area button {
+        height: 1em;
+        
+    }
+
+    .input-area button img {
+        height: .5em;
+        
+    }
+  }
+
+   .error-icon {
+    right: 43%;
+    
+  } 
+
+
+  @media (min-width: 425px) and (max-width: 767px) {
+    .flex-container {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        overflow-y: visible;
+      }
+
+      .logo-div {
+        position: relative; 
+        padding-left: 0 !important; 
+        margin-top: 1rem; 
+        align-self: flex-start;
+      }
+    
+      #image-div {
+        width: 100%;
+        height: 100vh; 
+        margin: 2rem 0; 
+      }
+      
+    
+      .text-content {
+        max-width: 100%; 
+        margin-right: 13rem ;
+        margin-top: 2rem;
+        position: inherit;
+        text-align: center;
+      }
+
+      #colored-text1 {
+        font-size: 50px;
+      }
+
+      #colored-text2 {
+        font-size: 15px;
+      }
+  
+      .input-area {
+        width: auto;
+        position: relative;
+      }
+  
+      .input-area input {
+          height: 3rem;
+          width: 24em;
+          position: inherit;
+          font-size: 15px;
+      }
+  
+      .input-area button {
+          position: relative;
+          width: 2em;
+          height: 3rem;
+          top: 0%;
+          right: -40%;
+          transform: translateY(-100%);
+      }
+  
+      .input-area button img {
+          height: .7em;
+          padding-top: 4px;
+      }
+
+      .error-icon {
+        right: 25%;
+        top: 30%;
+      }
+
+      .error-message {
+        position: relative;
+        top: -30%;
+      }
+  }
+
+  @media (min-width: 320px) and (max-width: 425px) {
+    .flex-container {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        overflow-y: visible;
+      }
+
+      .logo-div {
+        position: relative; 
+        padding-left: 0 !important; 
+        margin-top: 1rem; 
+        align-self: flex-start;
+      }
+    
+      #image-div {
+        width: 100%;
+        height: 70vh; 
+        margin: 2rem 0; 
+      }
+      
+    
+      .text-content {
+        max-width: 100%; 
+        margin-right: 20rem ;
+        margin-top: 2rem;
+        position: inherit;
+        align-self: center;
+      }
+
+      #colored-text1 {
+        font-size: 50px;
+      }
+
+      #colored-text2 {
+        font-size: 15px;
+      }
+  
+      .input-area {
+        width: auto;
+        position: relative;
+      }
+  
+      .input-area input {
+          height: 3rem;
+          width: 17em;
+          position: inherit;
+          font-size: 15px;
+      }
+  
+      .input-area button {
+          position: relative;
+          width: 2em;
+          height: 3rem;
+          top: 0%;
+          right: -40%;
+          transform: translateY(-100%);
+      }
+  
+      .input-area button img {
+          height: .7em;
+          padding-top: 4px;
+      }
+
+      .error-icon {
+        right: 25%;
+        top: 30%;
+        
+      }
+
+      .error-message {
+        position: relative;
+        top: -30%;
+      }
+  }
